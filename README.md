@@ -1,7 +1,7 @@
 # ako-prototypes
 ###### Some Useful Prototypes For Every JS lover
 ## Installation
-### Install Using NPM
+### Node
 First You Have To Install Package
 ```bash
 npm i ako-prototypes
@@ -14,7 +14,7 @@ import 'ako-prototypes';
 // Module
 require('ako-prototypes');
 ```
-### Install Using Html Script Tag
+### Browser
 ```html
 <!-- NPM -->
 
