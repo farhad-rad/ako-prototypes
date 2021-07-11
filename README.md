@@ -1,7 +1,7 @@
 # ako-prototypes
 ###### Some Useful Prototypes For Every JS lover
 ## Installation
-#### Install Using NPM
+### Install Using NPM
 First You Have To Install Package
 ```bash
 npm i ako-prototypes
@@ -14,7 +14,7 @@ import 'ako-prototypes';
 // Module
 require('ako-prototypes');
 ```
-#### Install Using Html Script Tag
+### Install Using Html Script Tag
 ```html
 <!-- NPM -->
 
@@ -22,7 +22,7 @@ require('ako-prototypes');
 <script src="path/to/package/dist/ako-prototypes.min.js"></script>
 ```
 ## Usage
-#### Array Prototypes
+### Array Prototypes
 - **distinct**: Distincs Base Array by **func** Declaring Property
   - param `Function` **func**
   - returns `Array`
@@ -82,7 +82,7 @@ require('ako-prototypes');
    }
   */
   ``` 
-#### String Prototypes
+### String Prototypes
 - **toRegexQuote**: Creates Regex Object After Escaping Special Characters By Adding \ In Base String
   **Note:** Does Not Escape BackSlashes(\)
   - param `String` **flag**
@@ -120,7 +120,7 @@ require('ako-prototypes');
   ```javascript
   "منتشر شده در ژولای 2021".toPersianNumeric(); // "منتشر شده در ژولای ۲۰۲۱"
   ```
-#### Number Prototypes
+### Number Prototypes
 - **fixDigits**: Add Leading Zero(**digits**) To Start And End(**decimals**) Of Base Number
   - param `Number` **digits**
   - param `Number` **decimals**
