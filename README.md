@@ -2,7 +2,7 @@
 ###### Some Useful Prototypes For Every JS lover
 ## Installation
 ### Node
-First You Have To Install Package
+First You Have to Install Package
 ```bash
 npm i ako-prototypes
 ```
@@ -15,6 +15,7 @@ import 'ako-prototypes';
 require('ako-prototypes');
 ```
 ### Browser
+Just Add Script Tag to Your HTML Page And Tadaa :)
 ```html
 <!-- NPM -->
 
