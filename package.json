@@ -1,5 +1,5 @@
 {
-  "name": "@ako/prototypes",
+  "name": "ako-prototypes",
   "version": "1.0.0",
   "description": "Some Useful Prototypes For Js Lovers",
   "main": "dist/ako-prototypes",
@@ -42,9 +42,6 @@
       "email": "umidzarei@gmail.com"
     }
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/farhad-rad/ako-prototypes/issues"
