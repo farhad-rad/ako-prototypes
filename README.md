@@ -161,9 +161,9 @@ require('ako-prototypes');
   (0).isPrime // false
   (1.2).isPrime // false
   (1).isPrime // false
-  (2).isInteger // true
-  (3).isInteger // true
-  (4).isInteger // false
+  (2).isPrime // true
+  (3).isPrime // true
+  (4).isPrime // false
   ```
 - **isEven**: Checks If Base Number Is Even
   - returns `Boolean`
