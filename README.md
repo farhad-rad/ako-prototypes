@@ -121,7 +121,7 @@ require('ako-prototypes');
   "منتشر شده در ژولای 2021".toPersianNumeric(); // "منتشر شده در ژولای ۲۰۲۱"
   ```
 ### Number Prototypes
-- **fixDigits**: Add Leading Zero(**digits**) To Start And End(**decimals**) Of Base Number
+- **fixDigits**: Add Leading Zero To Start(**digits**) And End(**decimals**) Of Base Number
   - param `Number` **digits**
   - param `Number` **decimals**
   - returns `String`
