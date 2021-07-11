@@ -12,7 +12,7 @@ let webpack = require('webpack'),
     ].find((x, i) => i == new Date().getMonth())} ${new Date().getFullYear()}`+ '\n' +
         pkg.contributors.map(x => `${x.name} <${x.email}>`).join('\n') + '\n' +
         pkg.homepage + '\n' +
-        'Under ' + pkg.license + ' license ' +  + '\n' +
+        'Under ' + pkg.license + ' license ' + '\n' +
         '\n',
     fileName = pkg.name.replace(/@/g,'').replace(/\//g,'-') + ".js",
     plugins = [
