@@ -1,6 +1,6 @@
 {
   "name": "ako-prototypes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Some Useful Prototypes For Js Lovers",
   "main": "dist/ako-prototypes",
   "scripts": {

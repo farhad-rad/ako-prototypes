@@ -412,7 +412,6 @@ Just Add Script Tag to Your HTML Page And Tadaa :)
   Math.randomInRange(10, 1); // 3 
 
   Math.randomInRange(5); // 1 (Between One And 5)
-  Math.randomInRange(5); // 0 Between Zero And 5
   Math.randomInRange(5); // 3
   ```
 - **randomBoolean**: Creates A Random Boolean
