@@ -108,7 +108,7 @@ Number.prototype.absRound = function () {
  * @returns {Number}
  */
 Number.prototype.absFloor = function () {
-    return this < 0 ? (Math.ceil(number) || 0) : Math.floor(this);
+    return this < 0 ? (Math.ceil(this) || 0) : Math.floor(this);
 };
 
 /**
