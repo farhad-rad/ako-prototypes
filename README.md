@@ -17,8 +17,8 @@ require('ako-prototypes');
 ### Browser
 Just Add Script Tag to Your HTML Page And Tadaa :)
 ```html
-<!-- NPM -->
-
+<!-- CDN -->
+<script src="https://cdn.jsdelivr.net/npm/ako-prototypes/dist/ako-prototypes.min.js"></script>
 <!-- Local -->
 <script src="path/to/package/dist/ako-prototypes.min.js"></script>
 ```
@@ -83,6 +83,109 @@ Just Add Script Tag to Your HTML Page And Tadaa :)
    }
   */
   ``` 
+### Date Prototypes
+- **isInRange**: Checks Whether Base Date Is In Range Of **start** And **end**
+  - param `Date` **start**
+  - param `Date` **end**
+  - returns `Boolean`
+  ```javascript
+  var date1 = new Date("5 july 2020"),
+    date2= new Date("11 july 2021"),
+    start = new Date("1 july 2021"),
+    end = new Date("10 july 2021");
+  
+  date1.isInRange(start, end); // true
+  date1.isInRange(end, start); // true
+  date2.isInRange(start, end); // false
+  
+  date1.isInRange(_, end); // TypeError('Start Must Be Instance Of Date')
+  date1.isInRange(start, _); // TypeError('End Must Be Instance Of Date')
+  ```
+- **addMilliseconds**: Adds **milliseconds** To Base Date
+  - param `Number` **milliseconds**
+  - returns `Date`
+  ```javascript
+  new Date("1 july 2021").addMilliseconds(864e5); // Fri Jul 02 2021 00:00:00 (864e5 Equals 24 Hours)
+  new Date().addMilliseconds(_); // TypeError('Milliseconds Must Be Integer')
+  ```
+- **addSeconds**: Adds **seconds** To Base Date
+  - param `Number` **seconds**
+  - returns `Date`
+  ```javascript
+  new Date("1 july 2021").addSeconds(3600); // Thu Jul 01 2021 01:00:00 (3600 Equals 1 Hours)
+  new Date().addSeconds(_); // TypeError('Seconds Must Be Integer')
+  ```
+- **addMinutes**: Adds **minutes** To Base Date
+  - param `Number` **minutes**
+  - returns `Date`
+  ```javascript
+  new Date("1 july 2021").addMinutes(70); // Thu Jul 01 2021 01:10:00
+  new Date().addMinutes(_); // TypeError('Minutes Must Be Integer')
+  ```
+- **addHours**: Adds **hours** To Base Date
+  - param `Number` **hours**
+  - returns `Date`
+  ```javascript
+  new Date("1 july 2021").addHours(24); // Fri Jul 02 2021 00:00:00
+  new Date().addHours(_); // TypeError('Hours Must Be Integer')
+  ```
+- **addDays**: Adds **days** To Base Date
+  - param `Number` **days**
+  - returns `Date`
+  ```javascript
+  new Date("1 july 2021").addDays(7); // Thu Jul 08 2021 00:00:00
+  new Date().addDays(_); // TypeError('Days Must Be Integer')
+  ```
+- **addMonths**: Adds **months** To Base Date
+  - param `Number` **months**
+  - returns `Date`
+  ```javascript
+  new Date("1 july 2021").addMonths(6); // Sat Jan 01 2022 00:00:00
+  new Date().addMonths(_); // TypeError('Months Must Be Integer')
+  ```
+- **addYears**: Adds **years** To Base Date
+  - param `Number` **years**
+  - returns `Date`
+  ```javascript
+  new Date("1 july 2021").addYears(4); // Tue Jul 01 2025 00:00:00
+  new Date().addYears(_); // TypeError('Years Must Be Integer')
+  ```
+- **totalMilliseconds**: Calculates Total Milliseconds From Base Date Up Until Now
+  - type `Number`
+  ```javascript
+  var i = new Date();
+  i.totalMilliseconds // 0
+  someThingThatTakesTime();
+  i.totalMilliseconds // 243785
+  ```
+- **totalSeconds**: Calculates Total Seconds From Base Date Up Until Now
+  - type `Number`
+  ```javascript
+  var i = new Date();
+  i.totalSeconds // 0
+  someThingThatTakesTime();
+  i.totalSeconds // 243
+  ```
+- **totalMinutes**: Calculates Total Minutes From Base Date Up Until Now
+  - type `Number`
+  ```javascript
+  var i = new Date();
+  i.totalMinutes // 0
+  someThingThatTakesTime();
+  i.totalMinutes // 4
+  ```
+- **totalHours**: Calculates Total Hours From Base Date Up Until Now
+  - type `Number`
+  ```javascript
+  /* Its Mon Jul 12 2021 19:42:23 Now */
+  new Date("14 june 2000").totalHours // 184771 (Its Actually My Birthday ☺)
+  ```
+- **totalDays**: Calculates Total Days From Base Date Up Until Now
+  - type `Number`
+  ```javascript
+  /* Its Mon Jul 12 2021 Now */
+  new Date("14 june 2000").totalDays // 7698
+  ```
 ### String Prototypes
 - **toRegexQuote**: Creates Regex Object After Escaping Special Characters By Adding \ In Base String
   **Note:** Does Not Escape BackSlashes(\)
@@ -150,13 +253,13 @@ Just Add Script Tag to Your HTML Page And Tadaa :)
   num.isInRange(1, _); // TypeError('End Must Be Instance Of Number')
   ```
 - **isInteger**: Checks If Base Number Is An Integer
-  - returns `Boolean`
+  - type `Boolean`
   ```javascript
   (6).isInteger // true
   (7.2).isInteger // false
   ```
 - **isPrime**: Checks If Base Number Is A Primitive Number
-  - returns `Boolean`
+  - type `Boolean`
   ```javascript
   (-10).isPrime // false
   (0).isPrime // false
@@ -167,13 +270,13 @@ Just Add Script Tag to Your HTML Page And Tadaa :)
   (4).isPrime // false
   ```
 - **isEven**: Checks If Base Number Is Even
-  - returns `Boolean`
+  - type `Boolean`
   ```javascript
   (2).isEven // true
   (3).isEven // false
   ```
 - **isOdd**: Checks If Base Number Is Odd
-  - returns `Boolean`
+  - type `Boolean`
   ```javascript
   (2).isOdd // false
   (3).isOdd // true
@@ -261,6 +364,69 @@ Just Add Script Tag to Your HTML Page And Tadaa :)
   (27.12345).trunc();  // 27
   (-27.12345).trunc();  // 27
   ```
-  
+### Object Prototypes
+- **toFormData**: Creates An Instance Of FormData From Base Object 
+  - returns `FormData`
+  ```javascript
+  var akoObject = {
+    id: 1,
+    gender: "MALE",
+    birthDate: new Date("14 june 2000"),
+    avatar: document.querySelector("input[type=file]").files,
+    nickNames:[
+      "ako","ako-team"
+    ]
+  }
+  var akoFormData = akoObject.toFormData(); // FormData
+  ```
+### FormData Prototypes
+- **toObject**: Converts FormData Object Into JS Object
+  - returns `Object`
+  ```javascript
+  /* akoFormData Is The Same As What Defined In Object Prototypes Section */
+  akoFormData.toObject(); 
+  /*
+    {
+      avatar: File { name: "blob", lastModified: 1626103627984, size: 0, … }
+      birthDate: "2000-06-13T19:30:00.000Z"
+      gender: "MALE"
+      id: "1"
+      nickNames: Array [ "ako", "ako-team" ]
+    }
+  */
+  ```
+- **toJson**: Converts FormData Object Into JSON
+  - returns `String`
+  ```javascript
+  /* akoFormData Is The Same As What Defined In Object Prototypes Section */
+  akoFormData.toJson(); // {"avatar":{},"birthDate":"2000-06-13T19:30:00.000Z","gender":"MALE","id":"1","nickNames":["ako","ako-team"]}
+  ```
+### Math Properties
+- **randomInRange**: Calculates A Random Number Between **startRange** And **endRange**
+  - param `Number` **startRange** Default Is 0
+  - param `Number` **endRange** Default Is 1
+  - returns `Number`
+  ```javascript
+  Math.randomInRange(1, 10); // 7
+  Math.randomInRange(1, 10); // 6 
+  Math.randomInRange(10, 1); // 3 
+
+  Math.randomInRange(5); // 1 (Between One And 5)
+  Math.randomInRange(5); // 3
+  ```
+- **randomBoolean**: Creates A Random Boolean
+  - returns `Boolean`
+  ```javascript
+  Math.randomBoolean(); // true
+  Math.randomBoolean(); // true
+  Math.randomBoolean(); // false
+  ```
+### Boolean Prototypes
+- **reverse**: Reverse Base Boolean Value
+  - returns `Boolean`
+  ```javascript
+  var i = 1, b=2;
+  (i > b).reverse() // true
+  ```
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
