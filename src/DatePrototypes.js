@@ -5,8 +5,8 @@
  * @returns {Boolean}
  */
 Date.prototype.isInRange = function (start, end) {
-    if (!(start instanceof Date)) throw new TypeError('Start Must Be Instance Of Date Object');
-    if (!(end instanceof Date)) throw new TypeError('End Must Be Instance Of Date Object');
+    if (!(start instanceof Date)) throw new TypeError('Start Must Be Instance Of Date');
+    if (!(end instanceof Date)) throw new TypeError('End Must Be Instance Of Date');
     return (this.getTime() >= start.getTime() && this.getTime() <= end.getTime()) || (this.getTime() >= end.getTime() && this.getTime() <= start.getTime());
 };
 
